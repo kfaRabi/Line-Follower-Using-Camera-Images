@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="bd.ac.seu.iptools.MainUIController">
+  <children>
+    <VBox prefHeight="200.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <MenuBar>
+          <menus>
+            <Menu mnemonicParsing="false" text="File">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#handleFileOpenAction" text="Open" />
+                <MenuItem mnemonicParsing="false" onAction="#handleFileSaveAction" text="Save" />
+                <MenuItem mnemonicParsing="false" text="Close" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Operations">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Box Blur" />
+                <MenuItem mnemonicParsing="false" text="RGB to Grayscale" />
+                <MenuItem mnemonicParsing="false" text="Rotate Clockwise" />
+                <MenuItem mnemonicParsing="false" text="Canny" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Help">
+              <items>
+                <MenuItem mnemonicParsing="false" text="About" />
+              </items>
+            </Menu>
+          </menus>
+        </MenuBar>
+        <ToolBar prefHeight="40.0" prefWidth="200.0">
+          <items>
+            <Button mnemonicParsing="false" onAction="#handleFileOpenAction" text="Open" />
+            <Button mnemonicParsing="false" onAction="#handleFileSaveAction" text="Save" />
+            <Label fx:id="distanceInfo" text="" />
+          </items>
+        </ToolBar>
+        <SplitPane dividerPositions="0.5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+          <items>
+            <ScrollPane>
+              <content>
+                <AnchorPane fx:id="leftPane" minHeight="0.0" minWidth="0.0" />
+              </content>
+            </ScrollPane>
+            <ScrollPane>
+              <content>
+                <AnchorPane fx:id="rightPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="493.0" prefWidth="370.0" />
+              </content>
+            </ScrollPane>
+          </items>
+        </SplitPane>
+        <Label fx:id="statusLabel" maxWidth="1.7976931348623157E308" VBox.vgrow="NEVER">
+          <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+          </VBox.margin>
+        </Label>
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Image Processing Tools.jnlp">
+  <information>
+    <title>Image Processing Tools</title>
+    <vendor>kmhasan</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" java-vm-args="-Djava.library.path=/media/myotherself/TenFive/OCV/opencv-3.1.0/build/lib "  href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/opencv-310.jar" size="312753" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Image Processing Tools" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="bd.ac.seu.iptools.ImageProcessingTools"  name="Image Processing Tools" />
+  <update check="always"/>
+</jnlp>
